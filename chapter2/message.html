@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Chapter 2-1 - メッセージを表示してみよう -</title>
+<link rel="stylesheet" href="common.css">
+<script src="init.js"></script>
+
+<h1>メッセージを表示してみよう</h1>
+<input type="text" value="" id='message'>
+<button onclick="showMessage()">表示</button>
+
+<script>
+    
+    function showMessage(){
+        
+        var message = id('message').value;
+        alert(message);
+        
+    }
+    
+</script>

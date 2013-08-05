@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>Chapter 2-3 - 年齢によって表示を変えましょう -</title>
+<link rel="stylesheet" href="common.css">
+<script src="init.js"></script>
+
+<h1>年齢によって表示を変えましょう</h1>
+
+あなたの年齢は？
+<input type="number" value="0" id="age">
+<button onclick="conditionalMessage()">判定</button>
+
+<script>
+    
+    function conditionalMessage(){
+        
+        var age = id('age').valueAsNumber;
+        var result = '';
+
+        if ( age < 0 ) {
+            result = '';
+        } else if ( age >= 6 && age <= 12 ) {
+            result = '小学生';
+        } else if ( age >= 13 && age <= 15 ) {
+            result = '中学生';
+        } else if ( age >= 16 && age <= 18 ) {
+            result = '高校生';
+        } else {
+            result = age + '歳';
+        }
+        
+        alert('あなたは「' + result + '」です。');
+        
+    }
+    
+</script>
