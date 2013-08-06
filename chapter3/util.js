@@ -1,34 +1,68 @@
-var box = ['./img/y01.JPG','./img/y02.JPG','./img/y03.JPG','./img/y04.JPG','./img/y05.JPG','./img/y06.JPG'];
+var urare = './img/y03.JPG';
+var srare = './img/y04.JPG';
+var rare = './img/y02.JPG';
+var normal = './img/y01.JPG';
 
-var card1 = './img/y01.JPG';
-var card2 = './img/y02.JPG';
-var card3 = './img/y03.JPG';
-var card2 = './img/y04.JPG';
-var card2 = './img/y05.JPG';
-var card2 = './img/y06.JPG';
+var urare_name = '[UR] ウルトラレア';
+var srare_name = '[SR] スーパーレア';
+var rare_name = '[R] レア';
+var normal_name = '[N] ノーマル';
 
-//rondom();show();
-// result = random(1,10);
-// if(result === n )
-
-
-
-function lot(){
-    var rand = random(box.length);
-    var result = $('result');
-    var past = $('past');
-    var div = document.createElement('span');
-    var img = document.createElement('img');
-    img.src = box[rand];
-    div.appendChild(img);
-    result.innerHTML= div.innerHTML;
-    var cn = past.childNodes.length;
-    console.log(cn);
-    var fchild = past.firstChild;
-    if(cn >= 4){
-        past.removeChild(past.lastChild);
+function gacha(){
+    result = random(10);
+    
+    if( result === 10 ){
+        show(urare,urare_name);
+    }else if( result >= 8 ){
+        show(srare,srare_name);
+    }else if( result >= 5 ){
+        show(rare,rare_name);
+    }else{
+        show(normal,normal_name);
     }
-    past.insertBefore(div,fchild);
+}
+
+var OUTPUT_ELEMENT_ID = 'result';
+var CARD_NAME_ELEMENT_ID = 'card-title';
+
+function show(img_path,card_name){
+    var output = $(OUTPUT_ELEMENT_ID);
+    var name = $(CARD_NAME_ELEMENT_ID);
+    var card = document.createElement('img');
+    var outer = document.createElement('div');
+        card.src = img_path;
+        card.addEventListener('load',function(){
+            name.innerText = card_name;
+            output.style['background-image'] = 'url('+img_path+')';
+            var wrap = $('wrapper');
+            var back = $('backface');
+            var fore = $('foreface');
+            back.style.display = 'block';
+            fore.style.display = 'none';
+            
+            wrap.className = 'anime-cardout wrapper';
+            wrap.style.display = 'block';
+            wrap.addEventListener('webkitAnimationEnd',function(){
+                wrap.removeEventListener('webkitAnimationEnd', arguments.callee);
+                
+                wrap.className = 'wrapper anime-flip1';
+                wrap.addEventListener('webkitAnimationEnd',function(){
+                    wrap.removeEventListener('webkitAnimationEnd', arguments.callee);
+                    
+                    back.style.display = 'none';
+                    
+                    wrap.className = 'wrapper anime-flip2';
+                    fore.style.display = 'block';
+                    wrap.addEventListener('webkitAnimationEnd',function(){
+                        wrap.removeEventListener('webkitAnimationEnd', arguments.callee);
+                        wrap.className = 'wrapper';
+                        wrap.removeEventListener('webkitAnimationEnd', arguments.callee);
+                    });
+                });
+               
+            });
+        });
+    
 }
 
 function random(num){
