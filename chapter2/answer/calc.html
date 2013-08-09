@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <title>Chapter 2-2 - 電卓をつくってみよう -</title>
-<link rel="stylesheet" href="lib/css/common.css">
-<script src="lib/js/init.js"></script>
+<link rel="stylesheet" href="common.css">
+<script src="init.js"></script>
 
 <h1>電卓をつくってみよう</h1>
 <input type="number" value="0" id='num1'>
@@ -14,7 +14,11 @@
     
     function calc(){
         
-        // ここに記述してください
+        var num1 = id('num1').valueAsNumber;
+        var num2 = id('num2').valueAsNumber;
+        
+        var res = num1 + num2;
+        alert( res );
         
     }
     

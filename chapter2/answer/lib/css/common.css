@@ -1,0 +1,12 @@
+body {
+    padding: 1em;
+}
+* {
+    font-size: 1.2em;
+}
+
+#age {
+    width: 3em;
+    text-align: right;
+    margin-right: 1em;
+}

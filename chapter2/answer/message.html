@@ -5,14 +5,15 @@
 <script src="lib/js/init.js"></script>
 
 <h1>メッセージを表示してみよう</h1>
-
-<!-- ここにボタンを記述してください -->
+<input type="text" value="" id='message'>
+<button onclick="showMessage()">表示</button>
 
 <script>
     
     function showMessage(){
         
-        // ここに記述してください
+        var message = id('message').value;
+        alert(message);
         
     }
     
