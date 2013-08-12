@@ -37,12 +37,13 @@ function omikuji(){
 		unsei('学　問　がんばれ');
 	}
 
+	/* これ書かせる？(これ隠すと書く部分がなくて一瞬で終わりそう */
 	function show(omikuji){
 		id('omikuji').innerText = omikuji;
 		id('bangou').innerText = '第'+result+'番';
 	}
 
-	/*  */
+	/* 引数を複数とって一気に追加したほうがよさげ */
 	function unsei(text){
 		var elem = document.createElement('div');
 		elem.className = 'unsei';
@@ -50,7 +51,7 @@ function omikuji(){
 		id('waku').appendChild(elem);
 	}
 
-	/*  */
+	/* 隠せるように書き換える */
 	function sakujo(){
 		var elems = document.getElementsByClassName('unsei');
 		var length = elems.length;
