@@ -5,19 +5,18 @@
 body {
     margin:0;
     padding:10px 0 0px;
-    /*font-family:'omikuji';*/
     text-align: center;
-
+    background-repeat: repeat;
 }
 * {
     font-size: 1.2em;
 }
 button{
 	-webkit-appearance:none;
-        background-image:url(./wood.jpg);
-        font-family:omikuji;
-        padding:10px;
-        text-shadow:1px -1px 0px rgba(255,255,255,.5);
+    background-image:url(./wood.jpg);
+    font-family:omikuji;
+    padding:10px;
+    text-shadow:1px -1px 0px rgba(255,255,255,.5);
 }
 #age {
     width: 3em;
@@ -34,6 +33,7 @@ button{
 	   -moz-box-sizing: border-box;
 	        box-sizing: border-box;
 	border:1px solid rgba(255,0,0,.8);
+	background-color: #FFF;
 }
 #omikuji{
 	font-size:4.5em;
@@ -60,12 +60,10 @@ button{
 	font-size:1.5em;
 	font-family:'omikuji';
 	margin-bottom:10px;
-
 }
 .unsei,#unsei1,#unsei2,#unsei3{
 	text-align: center;
 	display: inline-block;
-	/*width:100px;*/
 	font-size:1em;
 	vertical-align: top;
 	margin: 0 3px;
