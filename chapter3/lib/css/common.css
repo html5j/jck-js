@@ -1,0 +1,79 @@
+@font-face{
+	font-family:omikuji;
+	src: url(./KouzanMouhituFontOTF.otf);
+}
+body {
+    margin:0;
+    padding:10px 0 0px;
+    /*font-family:'omikuji';*/
+    text-align: center;
+
+}
+* {
+    font-size: 1.2em;
+}
+button{
+	-webkit-appearance:none;
+        background-image:url(./wood.jpg);
+        font-family:omikuji;
+        padding:10px;
+        text-shadow:1px -1px 0px rgba(255,255,255,.5);
+}
+#age {
+    width: 3em;
+    text-align: right;
+    margin-right: 1em;
+}
+
+#waku{
+	width:310px;
+	text-align: right;
+	margin:10px auto;
+	padding:10px 20px;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	border:1px solid rgba(255,0,0,.8);
+}
+#omikuji{
+	font-size:4.5em;
+	font-family:'omikuji';
+	text-align: center;
+	border-bottom:1px solid rgba(255,0,0,.8);
+	padding:0px 0px 3px;
+	margin-bottom:10px;
+}
+#bangou{
+	font-family:'omikuji';
+	text-align: center;
+}
+#kyou{
+	width:320px;
+	font-family:'omikuji';
+	font-size:1em;
+	text-align: center;
+	margin:0 auto;
+	padding:10px 0px;
+}
+#unsei{
+	text-align: center;
+	font-size:1.5em;
+	font-family:'omikuji';
+	margin-bottom:10px;
+
+}
+.unsei,#unsei1,#unsei2,#unsei3{
+	text-align: center;
+	display: inline-block;
+	/*width:100px;*/
+	font-size:1em;
+	vertical-align: top;
+	margin: 0 3px;
+
+	-webkit-text-orientation: upright;
+	-webkit-writing-mode: vertical-rl;
+	-moz-writing-mode: vertical-rl;
+	-ms-writing-mode: vertical-rl;
+	-o-writing-mode: vertical-rl;
+	writing-mode: vertical-rl;
+}

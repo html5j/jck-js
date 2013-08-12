@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="lib/css/common.css">
+<script src="lib/js/init.js"></script>
+<body>
+	<!-- step1 -->
+	<!-- <button onclick="omikuji();">ランダムな数字を表示する</button> -->
+
+	<!-- step2 -->
+	<button onclick="omikuji();">おみくじを引く</button>
+
+
+<script>
+function omikuji(){
+	var result = random(0,10);
+
+	// step1
+	// alert(result);
+
+	// step2
+	if(result == 10 ){
+		alert('大吉');
+	}else if( result >= 1 ){
+		alert('中吉');
+	}else{
+		alert('大凶');
+	}
+}
+</script>
