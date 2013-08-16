@@ -10,22 +10,22 @@
 <button onclick="omikuji();">おみくじを引く</button>
 
 <div id="kyou">あなたの今日の運勢は…</div>
+<div id="bangou"></div>
 <div id="omikuji"></div>
 
 <script>
 function omikuji(){
-
 	var num = random(0,10);
 
 	if( num == 10 ){
-		// ここに変更してください
-		alert('大吉');
+		id('omikuji').innerText = '大吉';
+		// id('bangou').innerText = '第'+num+'番';
 	}else if( num >= 1 ){
-		// ここに変更してください
-		alert('吉');
+		id('omikuji').innerText = '吉';
+		// id('bangou').innerText = '第'+num+'番';
 	}else{
-		// ここに変更してください
-		alert('凶');
+		id('omikuji').innerText = '凶';
+		// id('bangou').innerText = '第'+num+'番';
 	}
 
 }
