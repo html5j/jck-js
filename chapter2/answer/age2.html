@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<title>チャレンジ3: 年齢によって表示を変えましょう</title>
+<link rel="stylesheet" href="lib/css/common.css">
+<script src="lib/js/init.js"></script>
+
+<h1>年齢によって表示を変えましょう</h1>
+
+あなたの年齢は？
+<input type="number" value="0" id="age">
+<button onclick="conditionalMessage()">判定</button>
+
+<script>
+    
+    function conditionalMessage(){
+        
+        var age = id('age').valueAsNumber;
+        var res = '';
+
+        if ( age < 0 ) {
+            res = 'まだ生まれてません';
+        } else if ( age == 0 ) {
+            res = '産まれたばかり';
+        } else if ( age >= 6 && age <= 12 ) {
+            res = '小学生';
+        } else if ( age >= 13 && age <= 15 ) {
+            res = '中学生';
+        } else if ( age >= 16 && age <= 18 ) {
+            res = '高校生';
+        } else {
+            res = age + '歳';
+        }
+        
+        alert('あなたは「' + res + '」です。');
+        
+    }
+    
+</script>
