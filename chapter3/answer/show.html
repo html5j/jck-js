@@ -18,14 +18,14 @@ function omikuji(){
 	var num = random(0,10);
 
 	if( num == 10 ){
-		id('omikuji').innerText = '大吉';
-		// id('bangou').innerText = '第'+num+'番';
+		id('omikuji').textContent = '大吉';
+		// id('bangou').textContent = '第'+num+'番';
 	}else if( num >= 1 ){
-		id('omikuji').innerText = '吉';
-		// id('bangou').innerText = '第'+num+'番';
+		id('omikuji').textContent = '吉';
+		// id('bangou').textContent = '第'+num+'番';
 	}else{
-		id('omikuji').innerText = '凶';
-		// id('bangou').innerText = '第'+num+'番';
+		id('omikuji').textContent = '凶';
+		// id('bangou').textContent = '第'+num+'番';
 	}
 
 }
