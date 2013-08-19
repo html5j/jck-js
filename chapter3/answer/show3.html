@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
 <title>Chapter 3-2 - おみくじの結果を画面に表示してみよう -</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 <link rel="stylesheet" href="lib/css/common.css">
 <script src="lib/js/init.js"></script>
 <body>
-
+<!-- 中吉と末吉を追加 -->
 <h1>おみくじの結果を画面に表示してみよう</h1>
 <button onclick="omikuji();">くじを引く</button>
 
+<div id="name"></div>
 <div id="omikuji"></div>
 
 <script>
 function omikuji(){
 	var num = random(0,10);
 
+	var name = window.prompt('名前を入力してください。');
+	id('name').textContent = name + "さんの今日の運勢は";
+
 	if( num == 10 ){
 		id('omikuji').textContent = '大吉';
-	}else if( num >= 4 && num<=9 ){
+	}else if( num >= 6 && num <= 9){
+		id('omikuji').textContent = '中吉';
+	}else if( num >= 4 && num <= 5){
 		id('omikuji').textContent = '吉';
+	}else if( num >= 1 && num <= 3){
+		id('omikuji').textContent = '末吉';
 	}else{
 		id('omikuji').textContent = '凶';
 	}
 }
+
 </script>

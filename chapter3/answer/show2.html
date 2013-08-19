@@ -3,7 +3,8 @@
 <title>Chapter 3-2 - おみくじの結果を画面に表示してみよう -</title>
 <link rel="stylesheet" href="lib/css/common.css">
 <script src="lib/js/init.js"></script>
-
+<body>
+<!-- 中吉と末吉を追加 -->
 <h1>おみくじの結果を画面に表示してみよう</h1>
 <button onclick="omikuji();">くじを引く</button>
 
@@ -11,20 +12,19 @@
 
 <script>
 function omikuji(){
-
 	var num = random(0,10);
 
 	if( num == 10 ){
-		// ここを変更してください
-		alert('大吉');
-	}else if( num >= 3 ){
-		// ここを変更してください
-		alert('吉');
+		id('omikuji').textContent = '大吉';
+	}else if( num >= 6 && num <= 9){
+		id('omikuji').textContent = '中吉';
+	}else if( num >= 4 && num <= 5){
+		id('omikuji').textContent = '吉';
+	}else if( num >= 1 && num <= 3){
+		id('omikuji').textContent = '末吉';
 	}else{
-		// ここを変更してください
-		alert('凶');
+		id('omikuji').textContent = '凶';
 	}
-
 }
 
 </script>
